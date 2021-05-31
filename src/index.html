@@ -1,12 +1,81 @@
-<!doctype html>
-<html class="w-full h-full">
+<!DOCTYPE html>
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Official website of lunur" />
+    <meta name="author" content="Vinh Nguyen" />
     <title>lunur.net</title>
-    <link href="styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <link href="styles.css" rel="stylesheet" />
   </head>
-  <body class="flex flex-col">
-    <div>content</div>
+
+  <body class="w-full h-full bg-black text-white">
+
+    <!-- navbar -->
+    <nav id="navbar" class="sticky z-10 bg-black">
+      <div class="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+          <!-- hamburger button -->
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <button type="button" onclick="toggleNavbar()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+              <svg id="navbarBtnOpen" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg id="navbarBtnClose" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <!-- logo and text -->
+          <a href="/" class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex-shrink-0 flex items-center">
+              <img class="block h-8 w-auto" src="assets/logo.png" alt="lunur">
+            </div>
+            <div class="hidden sm:flex sm:ml-6 items-center text-xl ">
+              <h1>lunur.net</h1>
+            </div>
+          </a>
+          <!-- desktop links -->
+          <div class="hidden sm:block">
+            <div class="flex space-x-4">
+              <a href="#about" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+              <a href="#works" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Works</a>
+              <a href="#contact" class="text-black bg-white hover:bg-gray-300 px-3 py-2 rounded-md text-sm font-medium">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="hidden sm:hidden" id="mobileMenu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#about" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+          <a href="#works" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Works</a>
+          <a href="#contact" class="text-black bg-white hover:bg-gray-300 block px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main id="container" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+      
+      <!-- Hero -->
+      <div id="about" class="flex flex-col justify-center">
+        <div class="text-gray-600 pb-4">About us</div>
+        <div class="flex flex-col sm:flex-row-reverse justify-center">
+          <div class="flex-shrink-0 flex items-center justify-center space-x-6">
+            <img class="block h-32 w-auto rounded-full" src="assets/vinhvn.png" alt="Vincent">
+            <img class="block h-32 w-auto rounded-full" src="assets/naek2k.png" alt="Vincent">
+          </div>
+          <div class="flex flex-col mt-4 p-2 border-b border-white">
+            <h2 class="text-2xl">lunur</h2>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="scripts-min.js"></script>
   </body>
 </html>

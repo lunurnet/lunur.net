@@ -29,7 +29,7 @@ module.exports = {
 
       lunur: {
         bg: '#353531',
-        fg: '96adc8',
+        fg: '#96adc8',
       },
     },
     spacing: {

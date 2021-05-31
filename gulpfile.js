@@ -5,12 +5,23 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var tailwindcss = require('tailwindcss');
 
-// css and html minify
+// minify
+var jsmin = require('gulp-minify');
 var csso = require('gulp-csso');
 var htmlmin = require('gulp-htmlmin');
 
 // dev server
 var browserSync = require('browser-sync').create();
+
+// minify js
+gulp.task('build:js', function() {
+  gulp.src('./src/scripts.js')
+    .pipe(jsmin())
+    .pipe(gulp.dest('./dist'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
 
 // compile and minify css
 gulp.task('build:css', function () {
@@ -46,8 +57,8 @@ gulp.task('build:assets', function() {
     .pipe(gulp.dest('./dist/assets'));
 });
 
-// build css and html
-gulp.task('build', gulp.parallel('build:css', 'build:html', 'build:assets'));
+// build
+gulp.task('build', gulp.parallel('build:js', 'build:css', 'build:html', 'build:assets'));
 
 // development server
 gulp.task('serve', function() {
@@ -60,6 +71,7 @@ gulp.task('serve', function() {
   });
 
   // watch for changes
+  gulp.watch('./src/scripts.js', gulp.series('build:js'));
   gulp.watch('./src/assets/**/*', gulp.series('build:assets'));
   gulp.watch('./src/index.html', gulp.series('build:html'));
   gulp.watch(['./src/styles.css', './tailwind.config.js'], gulp.series('build:css'));
