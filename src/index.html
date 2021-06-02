@@ -10,7 +10,7 @@
     <link href="styles.css" rel="stylesheet" />
   </head>
 
-  <body class="w-full h-full text-lunur-100 from-black via-black to-lunur-700 bg-gradient-to-b relative">
+  <body id="top" class="w-full text-lunur-100 from-black via-black to-lunur-700 bg-gradient-to-b relative" onload="toggleAstronaut()">
 
     <!-- navbar -->
     <nav id="navbar" class="sticky top-0 z-10 bg-black">
@@ -28,7 +28,7 @@
             </button>
           </div>
           <!-- logo and text -->
-          <a href="/" class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <a href="#top" class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div class="flex-shrink-0 flex items-center">
               <img class="block h-8 w-auto" src="assets/logo.png" alt="lunur">
             </div>
@@ -98,7 +98,7 @@
         <!-- cards -->
         <div class="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 gap-6 mt-8">
           <div class="sm:text-center lg:text-left">
-            <img class="rounded-lg w-full h-80 sm:h-96 object-cover" src="assets/naek2k.png" alt="Avatar">
+            <img class="rounded-lg w-full h-72 sm:h-96 object-cover" src="assets/naek2k.png" alt="Avatar">
             <h2 class="text-xl md:text-2xl font-semibold mt-4">Nick El-Khoury</h2>
             <p class="text-lg md:text-xl font-base text-lunur-500 mt-1">Lead Developer</p>
             <div class="space-x-4 mt-3 text-lunur-700">
@@ -111,7 +111,7 @@
             </div>
           </div>
           <div class="sm:text-center lg:text-left">
-            <img class="rounded-lg w-full h-80 sm:h-96 object-cover" src="assets/vinhvn.png" alt="Avatar">
+            <img class="rounded-lg w-full h-72 sm:h-96 object-cover" src="assets/vinhvn.png" alt="Avatar">
             <h2 class="text-xl md:text-2xl font-semibold mt-4 ">Vincent Nguyen</h2>
             <p class="text-lg md:text-xl font-base text-lunur-500 mt-1">Lead Developer</p>
             <div class="space-x-4 mt-3 text-lunur-700">
@@ -153,8 +153,8 @@
             Contact Us
           </h1>
           <p class="mt-3 text-base text-lunur-600 sm:mt-5 sm:text-lg sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-            <span class="block">Want to work with us? Send us a message and we will get back to you as soon as possible.</span>
-            <span class="block">We are looking for individuals, entrepeneurs, and small businesses in need of a robust solution.</span>
+            <span class="inline lg:block">Want to work with us? Send us a message and we will get back to you as soon as possible.</span>
+            <span class="inline lg:block">We are looking for individuals, entrepeneurs, and small businesses in need of a robust solution.</span>
           </p>
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div>
@@ -166,6 +166,14 @@
         </div>
       </div>
     </main>
+
+    <!-- astronaut anchor -->
+    <div id="astronaut" class="fixed bottom-0 right-0 p-8 z-10 duration-200 ease-in transition-all">
+      <a href="#top">
+        <p class="bg-lunur-100 text-lunur-900 py-2 px-3 text-sm md:py-3 md:px-4 md:text-base lg:text-lg font-semibold rounded-full mb-4 md:mb-6 lg:mb-8 shadow-lg">Tap me to go up!</p>
+        <img class="w-12 md:w-16 lg:w-20 float-right animate-bounce" src="assets/astronaut.png" alt="Moon">
+      </a>
+    </div>
 
     <!-- background anchor -->
     <div class="absolute inset-x-0 bottom-0 -z-1">

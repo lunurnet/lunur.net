@@ -27,6 +27,18 @@ function toggleNavbar() {
 };
 
 /**
+ * function to hide/show astronaut
+ */
+function toggleAstronaut() {
+  const astronaut = document.getElementById('astronaut');
+  if (window.scrollY === 0) {
+    astronaut.classList.add('opacity-0');
+  } else {
+    astronaut.classList.remove('opacity-0');
+  }
+}
+
+/**
  * Smooth scrolling for href # links
  */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -38,5 +50,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 });
+
+/**
+ * Detect if scrolled away from top of page
+ */
+window.addEventListener("scroll", function () {
+  toggleAstronaut();
+}, false);
 
 console.log('scripts loaded');
