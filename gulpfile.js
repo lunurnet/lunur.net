@@ -15,7 +15,7 @@ var browserSync = require('browser-sync').create();
 
 // minify js
 gulp.task('build:js', function() {
-  gulp.src('./src/scripts.js')
+  return gulp.src('./src/scripts.js')
     .pipe(jsmin())
     .pipe(gulp.dest('./dist'))
     .pipe(browserSync.reload({
