@@ -40,7 +40,7 @@ gulp.task('build:css', function () {
 
 // minify html
 gulp.task('build:html', function() {
-  return gulp.src('./src/index.html')
+  return gulp.src('./src/**/*.html')
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
@@ -73,7 +73,7 @@ gulp.task('serve', function() {
   // watch for changes
   gulp.watch('./src/**/*.js', gulp.series('build:js'));
   gulp.watch('./src/assets/**/*', gulp.series('build:assets'));
-  gulp.watch('./src/index.html', gulp.series('build:html'));
+  gulp.watch('./src/**/*.html', gulp.series('build:html'));
   gulp.watch(['./src/styles.css', './tailwind.config.js'], gulp.series('build:css'));
 });
 
