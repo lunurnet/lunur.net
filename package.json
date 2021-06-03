@@ -4,8 +4,10 @@
   "description": "Static website made with Tailwind CSS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "./node_modules/.bin/gulp"
+    "test": "jest --watch",
+    "coverage": "jest --coverage",
+    "start": "./node_modules/.bin/gulp",
+    "build": "./node_modules/.bin/gulp build"
   },
   "author": "Vincent Nguyen & naek2k",
   "license": "ISC",
@@ -19,5 +21,12 @@
     "gulp-postcss": "^9.0.0",
     "postcss": "^8.2.6",
     "tailwindcss": "^2.0.3"
+  },
+  "jest": {
+    "automock": false,
+    "verbose": false,
+    "collectCoverageFrom": [
+      "<rootDir>/src/*.js"
+    ]
   }
 }
