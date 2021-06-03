@@ -35,3 +35,4 @@ npm run build
 ## Contributors
 
 - Vincent Nguyen @vinhvn
+- Nick El-Khoury @naek2k
