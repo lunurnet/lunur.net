@@ -24,7 +24,7 @@ function toggleNavbar() {
     openBtn.classList.add('block');
     mobileMenu.classList.add('hidden');
   }
-};
+}
 
 /**
  * function to hide/show astronaut
@@ -44,7 +44,6 @@ function toggleAstronaut() {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
       e.preventDefault();
-
       document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
       });
@@ -54,8 +53,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /**
  * Detect if scrolled away from top of page
  */
-window.addEventListener("scroll", function () {
+window.addEventListener('scroll', function () {
   toggleAstronaut();
 }, false);
 
-console.log('scripts loaded');
+/**
+ * Add onload handler to show/hide astronaut on page load
+ */
+window.addEventListener('load', function () {
+  toggleAstronaut();
+});
+
+/**
+ * Add toggle navbar function to mobile hamburger menu
+ */
+document.getElementById('navbarBtnToggleMobile').addEventListener('click', function () {
+  toggleNavbar();
+});
+
+// export for tests
+if (typeof exports !== 'undefined') {
+  module.exports = {
+      toggleNavbar,
+      toggleAstronaut,
+  };
+}
