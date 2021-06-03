@@ -25,8 +25,15 @@ const hrefElements = [
   { id: 'anchorLogo', href: 'http://localhost/' },
   { id: 'anchorGithubNaek', href: 'https://github.com/naek2k' },
   { id: 'anchorLinkedinNaek', href: 'https://linkedin.com/in/naek' },
+  { id: 'anchorWebsiteNaek', href: 'https://naek.ca/' },
   { id: 'anchorGithubVinh', href: 'https://github.com/vinhvn' },
   { id: 'anchorLinkedinVinh', href: 'https://linkedin.com/in/vinhvn' },
+  { id: 'anchorWebsiteVinh', href: 'https://vincentnguyen.ca/' },
+  { id: 'anchorGithubAdrian', href: 'https://github.com/adrian-alexander' },
+  { id: 'anchorLinkedinAdrian', href: 'https://linkedin.com/in/adrian-alexander' },
+  { id: 'anchorWebsiteAdrian', href: 'https://adrian-alexander.ca/' },
+  { id: 'anchorGithubKyle', href: 'https://github.com/kylepoirier' },
+  { id: 'anchorLinkedinKyle', href: 'https://linkedin.com/in/kylepoirierszekely/' },
   { id: 'anchorMail', href: 'mailto:naek@lunur.net' },
 ]
 
