@@ -31,10 +31,13 @@ function toggleNavbar() {
  */
 function toggleAstronaut() {
   const astronaut = document.getElementById('astronaut');
+  const anchor = document.getElementById('anchorAstronaut');
   if (window.scrollY === 0) {
     astronaut.classList.add('opacity-0');
+    anchor.classList.add('cursor-default');
   } else {
     astronaut.classList.remove('opacity-0');
+    anchor.classList.remove('cursor-default');
   }
 }
 
