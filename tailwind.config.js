@@ -26,6 +26,18 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+
+      lunur: {
+        100: "#eaeff4",
+        200: "#d5dee9",
+        300: "#c0cede",
+        400: "#abbdd3",
+        500: "#96adc8",
+        600: "#788aa0",
+        700: "#5a6878",
+        800: "#3c4550",
+        900: "#1e2328",
+      },
     },
     spacing: {
       px: "1px",
@@ -63,6 +75,7 @@ module.exports = {
       72: "18rem",
       80: "20rem",
       96: "24rem",
+      moon: "640px",
     },
     animation: {
       none: "none",
