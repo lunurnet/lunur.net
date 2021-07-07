@@ -17,12 +17,12 @@
           <HamburgerButton />
           <LogoAndText />
           <Links />
-          
         </div>
       </div>
     </nav>
 
-    <div class="
+    <div
+      class="
         mx-auto
         max-w-7xl
         px-4
@@ -32,17 +32,16 @@
         md:pb-72
         lg:pb-80
         xl:pb-moon
-      ">
+      "
+    >
       <Hero />
       <Team />
       <Works />
       <Contact />
-
     </div>
 
     <AstronautAnchor />
     <BackgroundAnchor />
-
   </div>
 </template>
 
@@ -52,13 +51,23 @@ import LogoAndText from "../components/LogoAndText.vue";
 import Links from "../components/Links.vue";
 import Works from "../components/Works.vue";
 import Hero from "../components/Hero.vue";
-// import Team from "../components/Team.vue";
+import Team from "../components/Team.vue";
 import Contact from "../components/Contact.vue";
 import AstronautAnchor from "../components/AstronautAnchor.vue";
 import BackgroundAnchor from "../components/BackgroundAnchor.vue";
 
 export default {
   name: "Home",
-  components: { HamburgerButton, LogoAndText, Links, Works, Hero, Contact, AstronautAnchor, BackgroundAnchor },
+  components: {
+    HamburgerButton,
+    LogoAndText,
+    Links,
+    Works,
+    Hero,
+    Contact,
+    AstronautAnchor,
+    BackgroundAnchor,
+    Team,
+  },
 };
 </script>
