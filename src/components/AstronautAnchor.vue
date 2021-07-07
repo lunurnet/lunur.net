@@ -35,7 +35,7 @@
       </p>
       <img
         class="w-12 md:w-16 lg:w-20 float-right animate-bounce"
-        src="assets/astronaut.png"
+        src="../assets/astronaut.png"
         alt="Moon"
       />
     </a>

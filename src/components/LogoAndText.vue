@@ -10,7 +10,7 @@
     "
   >
     <div class="flex-shrink-0 flex items-center">
-      <img class="block h-8 w-auto" src="assets/logo.png" alt="lunur" />
+      <img class="block h-8 w-auto" src="../assets/logo.png" alt="lunur" />
     </div>
     <div class="hidden sm:flex sm:ml-6 items-center">
       <h1 class="text-3xl font-semibold text-lunur-200">Lunur</h1>
