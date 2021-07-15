@@ -837,9 +837,12 @@
           </p>
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div>
-              <a
-                id="anchorMail"
-                href="mailto:naek@lunur.net"
+              <form name="contactForm">
+                <label for="subject">Subject:</label><br>
+                <input type="text" id="subject" name="subject" class="text-lunur-900" required><br>
+                <label for="message">Message:</label><br>
+                <input type="text" id="message" name="message" class="text-lunur-900" required><br><br>
+                <input type="button" value="Submit" onclick="return validateForm()"
                 class="
                   w-full
                   flex
@@ -856,9 +859,9 @@
                   hover:bg-lunur-200
                   md:py-4 md:text-lg md:px-10
                 "
-              >
-                Send us a message!
-              </a>
+                >
+              </form>
+              <br>
             </div>
           </div>
         </div>
