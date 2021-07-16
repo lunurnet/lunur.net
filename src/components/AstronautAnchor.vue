@@ -43,8 +43,7 @@
 </template>
 
 <script>
-
-export default({
-    name: "AstronautAnchor",
-})
+export default {
+  name: "AstronautAnchor",
+};
 </script>
