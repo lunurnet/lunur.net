@@ -63,7 +63,7 @@ I don't know how to fix local absolute paths. -->
 export default {
   name: "Person",
   props: {
-    people: Array,
+    people: Object,
   },
 };
 </script>

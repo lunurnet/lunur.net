@@ -10,13 +10,19 @@
       bg-gradient-to-b
       relative
     "
+    @scroll="toggleAstronaut"
   >
     <nav id="navbar" class="sticky top-0 z-10 bg-black">
       <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
-          <HamburgerButton />
+          <HamburgerButton @toggleNavbar="toggleNavbar" />
           <LogoAndText />
-          <Links />
+          <Links
+            @toggleNavbar="toggleNavbar"
+            @scrollToContact="scrollToContact"
+            @scrollToWorks="scrollToWorks"
+            @scrollToAbout="scrollToAbout"
+          />
         </div>
       </div>
     </nav>
@@ -34,13 +40,13 @@
         xl:pb-moon
       "
     >
-      <Hero />
+      <Hero @scrollToContact="scrollToContact" @scrollToWorks="scrollToWorks" />
       <Team />
       <Works />
       <Contact />
     </div>
 
-    <AstronautAnchor />
+    <AstronautAnchor @toggleAstronaut="toggleAstronaut" @scrollUp="scrollUp" />
     <BackgroundAnchor />
   </div>
 </template>
@@ -56,6 +62,8 @@ import Contact from "../components/Contact.vue";
 import AstronautAnchor from "../components/AstronautAnchor.vue";
 import BackgroundAnchor from "../components/BackgroundAnchor.vue";
 
+import script from "../scripts";
+
 export default {
   name: "Home",
   components: {
@@ -69,5 +77,28 @@ export default {
     BackgroundAnchor,
     Team,
   },
+  methods: {
+    toggleAstronaut() {
+      script.toggleAstronaut();
+    },
+    scrollUp() {
+      script.scrollUp();
+    },
+    toggleNavbar() {
+      script.toggleNavbar();
+    },
+    scrollToContact() {
+      script.scrollToContact();
+    },
+    scrollToAbout() {
+      script.scrollToAbout();
+    },
+    scrollToWorks() {
+      script.scrollToWorks();
+    },
+  },
+  mount() {
+    
+  }
 };
 </script>
