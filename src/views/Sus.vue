@@ -57,7 +57,7 @@
 //   nAudio.play();
 // }
 
-export default ({
+export default {
   name: "Sus",
-});
+};
 </script>
