@@ -11,7 +11,7 @@
           md:text-6xl
         "
       >
-        <span class="block xl:inline">Robust designs</span>
+        <span class="block xl:inline">Robust designs </span>
         <span class="block xl:inline">tailored for you</span>
       </h1>
       <p
