@@ -14,9 +14,10 @@
         hover:text-white hover:bg-gray-700
         focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white
       "
-      @click="toggleNavbar"
+      @click="toggleButton"
     >
       <svg
+        v-if="!toggle"
         id="navbarBtnOpen"
         class="block h-6 w-6"
         xmlns="http://www.w3.org/2000/svg"
@@ -33,8 +34,9 @@
         />
       </svg>
       <svg
+        v-else
         id="navbarBtnClose"
-        class="hidden h-6 w-6"
+        class="block h-6 w-6"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -55,9 +57,12 @@
 <script>
 export default {
   name: "HamburgerButton",
-  method: {
-    toggleNavbar() {
-      this.$emit("toggleNavbar");
+  props: {
+    toggle: Boolean,
+  },
+  methods: {
+    toggleButton() {
+      this.$emit("toggleButton");
     },
   },
 };
