@@ -97,8 +97,5 @@ export default {
       script.scrollToWorks();
     },
   },
-  mount() {
-    
-  }
 };
 </script>
