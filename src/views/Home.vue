@@ -15,16 +15,22 @@
     <nav id="navbar" class="sticky top-0 z-10 bg-black">
       <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
-          <HamburgerButton @toggleNavbar="toggleNavbar" />
+          <HamburgerButton @toggleButton="toggleButton" :toggle="toggle" />
           <LogoAndText />
-          <Links
-            @toggleNavbar="toggleNavbar"
+          <DesktopLinks
             @scrollToContact="scrollToContact"
             @scrollToWorks="scrollToWorks"
             @scrollToAbout="scrollToAbout"
+            :toggle="toggle"
           />
         </div>
       </div>
+      <MobileLinks
+        @scrollToContact="scrollToContact"
+        @scrollToWorks="scrollToWorks"
+        @scrollToAbout="scrollToAbout"
+        :toggle="toggle"
+      />
     </nav>
 
     <div
@@ -54,13 +60,16 @@
 <script>
 import HamburgerButton from "../components/HamburgerButton.vue";
 import LogoAndText from "../components/LogoAndText.vue";
-import Links from "../components/Links.vue";
+import DesktopLinks from "../components/DesktopLinks.vue";
+import MobileLinks from "../components/MobileLinks.vue";
 import Works from "../components/Works.vue";
 import Hero from "../components/Hero.vue";
 import Team from "../components/Team.vue";
 import Contact from "../components/Contact.vue";
 import AstronautAnchor from "../components/AstronautAnchor.vue";
 import BackgroundAnchor from "../components/BackgroundAnchor.vue";
+
+import { ref } from "vue";
 
 import script from "../scripts";
 
@@ -69,7 +78,8 @@ export default {
   components: {
     HamburgerButton,
     LogoAndText,
-    Links,
+    DesktopLinks,
+    MobileLinks,
     Works,
     Hero,
     Contact,
@@ -84,9 +94,6 @@ export default {
     scrollUp() {
       script.scrollUp();
     },
-    toggleNavbar() {
-      script.toggleNavbar();
-    },
     scrollToContact() {
       script.scrollToContact();
     },
@@ -96,6 +103,15 @@ export default {
     scrollToWorks() {
       script.scrollToWorks();
     },
+  },
+  setup() {
+    const toggle = ref(false);
+    const toggleButton = () => {
+      console.log("test");
+      toggle.value = !toggle.value;
+    };
+
+    return { toggle, toggleButton };
   },
 };
 </script>
