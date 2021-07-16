@@ -14,6 +14,7 @@
         hover:text-white hover:bg-gray-700
         focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white
       "
+      @click="toggleNavbar"
     >
       <svg
         id="navbarBtnOpen"
@@ -54,5 +55,10 @@
 <script>
 export default {
   name: "HamburgerButton",
+  method: {
+    toggleNavbar() {
+      this.$emit("toggleNavbar");
+    },
+  },
 };
 </script>

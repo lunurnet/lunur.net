@@ -4,7 +4,6 @@
     <div class="flex space-x-4">
       <a
         id="anchorAbout"
-        href="#about"
         class="
           text-gray-300
           hover:bg-gray-700 hover:text-white
@@ -14,11 +13,11 @@
           text-sm
           font-semibold
         "
+        @click="scrollToAbout"
         >About</a
       >
       <a
         id="anchorWorks"
-        href="#works"
         class="
           text-gray-300
           hover:bg-gray-700 hover:text-white
@@ -28,11 +27,11 @@
           text-sm
           font-semibold
         "
+        @click="scrollToWorks"
         >Our Works</a
       >
       <a
         id="anchorContact"
-        href="#contact"
         class="
           text-black
           bg-white
@@ -43,6 +42,7 @@
           text-sm
           font-semibold
         "
+        @click="scrollToContact"
         >Contact Us</a
       >
     </div>
@@ -52,7 +52,6 @@
       <div class="px-2 pt-2 pb-3 space-y-1">
         <a
           id="anchorAboutMobile"
-          href="#about"
           class="
             text-gray-300
             hover:bg-gray-700 hover:text-white
@@ -63,11 +62,11 @@
             text-base
             font-semibold
           "
+          @click="scrollToAbout"
           >About</a
         >
         <a
           id="anchorWorksMobile"
-          href="#works"
           class="
             text-gray-300
             hover:bg-gray-700 hover:text-white
@@ -78,11 +77,11 @@
             text-base
             font-semibold
           "
+          @click="scrollToWorks"
           >Our Works</a
         >
         <a
           id="anchorContactMobile"
-          href="#contact"
           class="
             text-black
             bg-white
@@ -94,6 +93,7 @@
             text-base
             font-semibold
           "
+          @click="scrollToContact"
           >Contact Us</a
         >
       </div>
@@ -104,5 +104,19 @@
 <script>
 export default {
   name: "Links",
+  mounted() {
+    this.$emit("toggleNavbar");
+  },
+  methods: {
+    scrollToAbout() {
+      this.$emit("scrollToAbout");
+    },
+    scrollToWorks() {
+      this.$emit("scrollToWorks");
+    },
+    scrollToContact() {
+      this.$emit("scrollToContact");
+    },
+  },
 };
 </script>

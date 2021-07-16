@@ -44,7 +44,6 @@
         <div>
           <a
             id="anchorContactHero"
-            href="#contact"
             class="
               w-full
               flex
@@ -61,6 +60,7 @@
               hover:bg-lunur-800
               md:py-4 md:text-lg md:px-10
             "
+            @click="scrollToContact"
           >
             Get Started
           </a>
@@ -68,7 +68,6 @@
         <div class="mt-3 sm:mt-0 sm:ml-3">
           <a
             id="anchorWorksHero"
-            href="#works"
             class="
               w-full
               flex
@@ -85,6 +84,7 @@
               hover:bg-lunur-200
               md:py-4 md:text-lg md:px-10
             "
+            @click="scrollToWorks"
           >
             Our Portfolio
           </a>
@@ -95,8 +95,15 @@
 </template>
 
 <script>
-
-export default ({
-    name: "Hero",
-})
+export default {
+  name: "Hero",
+  methods: {
+    scrollToContact() {
+      this.$emit("scrollToContact");
+    },
+    scrollToWorks() {
+      this.$emit("scrollToWorks");
+    },
+  },
+};
 </script>

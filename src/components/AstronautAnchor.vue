@@ -13,7 +13,7 @@
       opacity-0
     "
   >
-    <a id="anchorAstronaut" class="cursor-default" href="#top">
+    <a id="anchorAstronaut" class="cursor-default" @click="scrollUp">
       <p
         class="
           bg-lunur-100
@@ -45,5 +45,20 @@
 <script>
 export default {
   name: "AstronautAnchor",
+  created() {
+    window.addEventListener("scroll", this.toggleAstronaut);
+  },
+  methods: {
+    toggleAstronaut() {
+      this.$emit("toggleAstronaut");
+    },
+    scrollUp() {
+      this.$emit("scrollUp");
+    }
+    // scrollUp() {
+    //   var element = document.getElementById("top");
+    //   element.scrollIntoView({behavior: "smooth"});
+    // }
+  },
 };
 </script>
