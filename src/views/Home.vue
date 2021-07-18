@@ -48,7 +48,7 @@
     >
       <Hero @scrollToContact="scrollToContact" @scrollToWorks="scrollToWorks" />
       <Team />
-      <Works />
+      <Works @scrollToContact="scrollToContact" />
       <Contact />
     </div>
 
