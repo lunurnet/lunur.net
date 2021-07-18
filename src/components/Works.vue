@@ -38,7 +38,7 @@
         <a
           id="anchorTellUs"
           class="inline text-lunur-300 hover:text-lunur-400"
-          href="#contact"
+          @click="scrollToContact"
         >
           Tell us below!
         </a>
@@ -65,5 +65,10 @@
 <script>
 export default {
   name: "Works",
+  methods: {
+    scrollToContact() {
+      this.$emit("scrollToContact");
+    },
+  },
 };
 </script>
