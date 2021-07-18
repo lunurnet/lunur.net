@@ -1,0 +1,68 @@
+{
+  "nick": {
+    "name": "Nick El-Khoury",
+    "src": "/assets/naek2k.png",
+    "role": "Lead Engineer",
+    "github": "https://github.com/naek2k",
+    "linkedin": "https://linkedin.com/in/naek",
+    "website": "https://naek.ca",
+    "githubAnchor": "anchorGithubNaek",
+    "linkedinAnchor": "anchorLinkedinNaek",
+    "websiteAnchor": "anchorWebsiteNaek"
+  },
+  "vinh": {
+    "name": "Vinh Nguyen",
+    "src": "/assets/vinhvn.jpg",
+    "role": "Lead Engineer",
+    "github": "https://github.com/vinhvn",
+    "linkedin": "https://linkedin.com/in/vinhvn",
+    "website": "https://vincentnguyen.ca",
+    "githubAnchor": "anchorGithubVinh",
+    "linkedinAnchor": "anchorLinkedinVinh",
+    "websiteAnchor": "anchorWebsiteVinh"
+  },
+  "deen": {
+    "name": "Deen Haque",
+    "src": "/assets/deen.jpg",
+    "role": "Intermediate Developer",
+    "github": "https://github.com/deenhaque",
+    "linkedin": "https://linkedin.com/in/deenhaque",
+    "website": "",
+    "githubAnchor": "anchorGithubDeen",
+    "linkedinAnchor": "anchorLinkedinDeen",
+    "websiteAnchor": "anchorWebsiteDeen"
+  },
+  "matt": {
+    "name": "Matthew O'Neill",
+    "src": "/assets/matt.png",
+    "role": "Intermediate Developer",
+    "github": "https://github.com/matthewoneill",
+    "linkedin": "https://linkedin.com/in/matthewoneill3",
+    "website": "https://matthewoneill.ca",
+    "githubAnchor": "anchorGithubMatt",
+    "linkedinAnchor": "anchorLinkedinMatt",
+    "websiteAnchor": "anchorWebsiteMatt"
+  },
+  "adrian": {
+    "name": "Adrian Alexander",
+    "src": "/assets/adrian.png",
+    "role": "Junior Developer",
+    "github": "https://github.com/adrian-alexander",
+    "linkedin": "https://linkedin.com/in/adrian-alexander",
+    "website": "https://adrian-alexander.ca",
+    "githubAnchor": "anchorGithubAdrian",
+    "linkedinAnchor": "anchorLinkedinAdrian",
+    "websiteAnchor": "anchorWebsiteAdrian"
+  },
+  "kyle": {
+    "name": "Kyle Szekely",
+    "src": "/assets/kyle.jpg",
+    "role": "Junior Developer",
+    "github": "https://github.com/kylepoirier",
+    "linkedin": "https://linkedin.com/in/kylepoirierszekely",
+    "website": "",
+    "githubAnchor": "anchorGithubKyle",
+    "linkedinAnchor": "anchorLinkedinKyle",
+    "websiteAnchor": "anchorWebsiteKyle"
+  }
+}

@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Where have you gone now?" />
-    <meta name="author" content="Vinh Nguyen" />
-    <title>There is 1 impostor among us</title>
-    <link rel="shortcut icon" href="../assets/sus.ico" />
-    <link href="../styles.css" rel="stylesheet" />
-  </head>
-
-  <body class="h-screen bg-black relative">
+<template>
+  <div class="h-screen bg-black relative">
     <div class="flex flex-col items-center justify-center h-full">
       <button
         class="
@@ -48,23 +37,27 @@
         </button>
       </div>
     </div>
+  </div>
+</template>
 
-    <script>
-      let sAudio = new Audio("../assets/sus.mp3");
-      sAudio.loop = true;
-      let nAudio = new Audio("../assets/notsus.mp3");
-      function sus() {
-        document.getElementById("penguin").classList.remove("hidden");
-        nAudio.pause();
-        sAudio.currentTime = 0;
-        sAudio.play();
-      }
-      function notSus() {
-        document.getElementById("penguin").classList.add("hidden");
-        sAudio.pause();
-        nAudio.currentTime = 0;
-        nAudio.play();
-      }
-    </script>
-  </body>
-</html>
+<script>
+// let sAudio = new Audio("../assets/sus.mp3");
+// sAudio.loop = true;
+// let nAudio = new Audio("../assets/notsus.mp3");
+// function sus() {
+//   document.getElementById("penguin").classList.remove("hidden");
+//   nAudio.pause();
+//   sAudio.currentTime = 0;
+//   sAudio.play();
+// }
+// function notSus() {
+//   document.getElementById("penguin").classList.add("hidden");
+//   sAudio.pause();
+//   nAudio.currentTime = 0;
+//   nAudio.play();
+// }
+
+export default {
+  name: "Sus",
+};
+</script>

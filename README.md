@@ -1,38 +1,25 @@
-# lunur.net
+# app
 
-official website deployed @ [lunur.net](https://lunur.net)
-
-## Preview
-
-![Preview](https://i.imgur.com/0d60yjf.png)
-
-## Getting started locally
-
-Install the dependencies:
-
-```bash
-yarn install
-# or
+## Project setup
+```
 npm install
 ```
 
-Run the the development server:
-
-```bash
-yarn start
-# or
-npm run start
+### Compiles and hot-reloads for development
+```
+cd app
+npm run serve
 ```
 
-Compile, minify, and/or copy files for production. The compiled files will be placed in the `/dist` directory.
-
-```bash
-yarn build
-# or
+### Compiles and minifies for production
+```
 npm run build
 ```
 
-## Contributors
+### Lints and fixes files
+```
+npm run lint
+```
 
-- Vincent Nguyen @vinhvn
-- Nick El-Khoury @naek2k
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -1,32 +1,33 @@
 {
-  "name": "lunur.net",
-  "version": "1.0.0",
-  "description": "Static website made with Tailwind CSS",
-  "main": "index.js",
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "jest --watch",
-    "coverage": "jest --coverage",
-    "start": "./node_modules/.bin/gulp",
-    "build": "./node_modules/.bin/gulp build"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "author": "Vincent Nguyen & naek2k",
-  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0"
+  },
   "devDependencies": {
-    "autoprefixer": "^10.2.4",
-    "browser-sync": "^2.26.14",
-    "gulp": "^4.0.2",
-    "gulp-csso": "^4.0.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-minify": "^3.1.0",
-    "gulp-postcss": "^9.0.0",
-    "postcss": "^8.2.6",
-    "tailwindcss": "^2.0.3"
-  },
-  "jest": {
-    "automock": false,
-    "verbose": false,
-    "collectCoverageFrom": [
-      "<rootDir>/src/*.js"
-    ]
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "postcss": "^7.0.36",
+    "prettier": "^2.2.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4",
+    "vue-cli-plugin-tailwind": "~2.0.6"
   }
 }
