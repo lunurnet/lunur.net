@@ -40,6 +40,19 @@ function toggleAstronaut() {
     anchor.classList.remove('cursor-default');
   }
 }
+/**
+ * function to create mailto link
+ */
+function mailto() {
+  let subject = document.forms["contactForm"]["subject"];
+  let message = document.getElementById("message").value;
+
+  message = encodeURIComponent(message);
+
+  let mail = document.createElement("a");
+  mail.href = "mailto:naek@lunur.net?subject="+subject.value+"&body="+message;
+  mail.click();
+}
 
 /**
  * Smooth scrolling for href # links

@@ -835,32 +835,62 @@
               businesses in need of a robust solution.</span
             >
           </p>
-          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div>
-              <a
-                id="anchorMail"
-                href="mailto:naek@lunur.net"
-                class="
-                  w-full
-                  flex
-                  items-center
-                  justify-center
-                  px-8
-                  py-3
-                  border border-transparent
-                  text-base
-                  font-medium
-                  rounded-md
-                  text-lunur-900
+            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start text-left">
+              <form name="contactForm">
+                <label for="subject" 
+                  class="
+                    tracking-tight
+                    font-extrabold
+                    text-lunur-500
+                  "
+                > Your Idea</label>
+                <input type="text" id="subject" name="subject" style="width: 508.667px" required
+                  class="
+                    text-lunur-900 
+                    bg-lunur-100
+                    flex
+                    py-2
+                    px-4
+                    rounded-md
+                    mb-4
+                  "
+                >
+                <label for="message"
+                  class="
+                    tracking-tight
+                    font-extrabold
+                    text-lunur-500
+                  "
+                >More Details</label>
+                <textarea rows="4" cols="50" style="resize:none" id="message" name="message" form="contactForm" required 
+                  class="
+                  text-lunur-900  
                   bg-lunur-100
-                  hover:bg-lunur-200
-                  md:py-4 md:text-lg md:px-10
-                "
-              >
-                Send us a message!
-              </a>
+                  flex
+                  py-2
+                  px-4
+                  rounded-md
+                  mb-5
+                  "
+                ></textarea>
+                <div class="sm:text-center lg:text-left">
+                  <input type="button" value="Send us a message!" onclick="return mailto()"
+                    class="
+                      px-8
+                      py-3
+                      border border-transparent
+                      text-base
+                      font-medium
+                      rounded-md
+                      text-lunur-900
+                      bg-lunur-100
+                      hover:bg-lunur-200
+                      md:py-4 md:text-lg md:px-10
+                    "
+                  >
+                </div>
+              </form>
             </div>
-          </div>
         </div>
       </div>
     </main>
