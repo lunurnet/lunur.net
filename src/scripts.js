@@ -43,12 +43,14 @@ function toggleAstronaut() {
 /**
  * function to create mailto link
  */
-function validateForm() {
+function mailto() {
   let subject = document.forms["contactForm"]["subject"];
-  let message = document.forms["contactForm"]["message"];
+  let message = document.getElementById("message").value;
+
+  message = encodeURIComponent(message);
 
   let mail = document.createElement("a");
-  mail.href = "mailto:naek@lunur.net"+"?subject="+subject.value+"&body="+message.value;
+  mail.href = "mailto:naek@lunur.net?subject="+subject.value+"&body="+message;
   mail.click();
 }
 
