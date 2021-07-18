@@ -55,10 +55,6 @@ export default {
     scrollUp() {
       this.$emit("scrollUp");
     },
-    // scrollUp() {
-    //   var element = document.getElementById("top");
-    //   element.scrollIntoView({behavior: "smooth"});
-    // }
   },
 };
 </script>
